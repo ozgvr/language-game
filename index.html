@@ -1,0 +1,139 @@
+<html>
+<head>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta charset=utf-8>
+    <title>Upside Down Sentences</title>
+    <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH crossorigin=anonymous>
+    <style>
+        h1{
+            font-size: 4.5rem;
+            font-weight: bold;
+        }
+        #app{
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body onload="renderRandomSentence()">
+    <div class="d-flex flex-column p-5 h-100">
+        <div id="app" class="d-flex justify-content-center align-items-center flex-grow-1">
+            <h1 id="sentence" class="text-center"></h1>
+        </div>
+        <button class="btn btn-lg btn-primary" onclick="renderRandomSentence()">New Sentence</button>
+    </div>
+</body>
+<script>
+    const sentences = [
+        "Ali top oynuyor.",
+        "Ayşe kitap okuyor.",
+        "Mehmet su içiyor.",
+        "Zeynep resim çiziyor.",
+        "Köpek havlıyor.",
+        "Kedi uyuyor.",
+        "Deniz çok sakin.",
+        "Tren hızla ilerliyor.",
+        "Çocuk parkta oynuyor.",
+        "Kuşlar uçuyor.",
+        "Elma çok tatlı.",
+        "Anne yemek yapıyor.",
+        "Baba araba sürüyor.",
+        "Defne koşarak geliyor.",
+        "Rüzgar hafif esiyor.",
+        "Güneş parlıyor.",
+        "Saat tam on iki.",
+        "Çiçekler çok güzel.",
+        "Çocuklar şarkı söylüyor.",
+        "Kardeşim süt içiyor.",
+        "Efe futbol oynuyor.",
+        "Yağmur yağıyor.",
+        "Ay ışıl ışıl parlıyor.",
+        "Otobüs durağa yaklaşıyor.",
+        "Sincap ağaçtan atladı.",
+        "Uçak havalandı.",
+        "Deniz dalgalı.",
+        "Babam kahve içiyor.",
+        "Annem çay demliyor.",
+        "Kapı açık.",
+        "Pencere kapalı.",
+        "Kitap masanın üstünde.",
+        "Telefon çalıyor.",
+        "Kedi miyavlıyor.",
+        "Araba çok hızlı.",
+        "Bisiklet yavaş gidiyor.",
+        "Kalem yere düştü.",
+        "Televizyon açıktı.",
+        "Balıklar yüzüyor.",
+        "Çocuk zıplıyor.",
+        "Dondurma çok soğuk.",
+        "Hava sıcak.",
+        "Kuş cıvıldıyor.",
+        "Ahmet ders çalışıyor.",
+        "Defter çantanın içinde.",
+        "Lamba yanıyor.",
+        "Köpek kuyruğunu sallıyor.",
+        "Gözlük masanın üstünde.",
+        "Kahvaltı hazır.",
+        "Bebek ağlıyor.",
+        "Elmalar sepette.",
+        "Karpuz çok büyük.",
+        "Saat duvarda asılı.",
+        "Halı desenli.",
+        "Sandviç çok lezzetli.",
+        "Balıkçı ağ atıyor.",
+        "Kız kütüphanede kitap okuyor.",
+        "Öğrenciler dersi dinliyor.",
+        "Bardak masadan düştü.",
+        "Gökkuşağı çok güzel.",
+        "Çocuk annesini çağırıyor.",
+        "Ekmek fırından yeni çıktı.",
+        "Zeytin siyah.",
+        "Çay çok sıcak.",
+        "Süt beyazdır.",
+        "Kelebek uçuyor.",
+        "Kırmızı elma masada duruyor.",
+        "Uçurtma havada süzülüyor.",
+        "Ali sahilde yürüyüş yapıyor.",
+        "Saat on bire geliyor.",
+        "Yastık çok yumuşak.",
+        "Bahçede çiçekler açmış.",
+        "Kar taneleri düşüyor.",
+        "Bal arıları çiçeklere konuyor.",
+        "Denizde gemiler görünüyor.",
+        "Efe salıncağa biniyor.",
+        "Bahar geldi.",
+        "Yapraklar sarardı.",
+        "Kış çok soğuk geçti.",
+        "Çocuk salonda oynuyor.",
+        "Elma dalından düştü.",
+        "Havuç turuncudur.",
+        "Gökyüzü bulutlarla kaplı.",
+        "Lale kırmızı açtı.",
+        "Mevsimler değişiyor.",
+        "Köprüden araçlar geçiyor.",
+        "Sokak lambası yanıyor.",
+        "Bisiklet kırmızı renkte.",
+        "Sürahide su var.",
+        "Telefon elimde.",
+        "Bebek beşiğinde uyuyor.",
+        "Düğme koptu.",
+        "Kaplumbağa yavaş yürüyor.",
+        "Kırmızı balon uçtu.",
+        "Kuyruk çok uzun.",
+        "Ağaç gölgesi serin.",
+        "Çaydanlık kaynıyor.",
+        "Buz çok soğuk.",
+        "Yatak rahat.",
+        "Fırında kek pişiyor.",
+        "Çocuk camdan dışarı bakıyor.",
+        "Kapı yavaşça açıldı.",
+        "Merdivenlerden aşağı iniyorum."
+    ];
+    
+    const renderRandomSentence = () => {
+        const randomIndex = Math.floor(Math.random() * sentences.length);
+        const randomSentence = sentences[randomIndex];
+        document.getElementById("sentence").innerText = randomSentence;
+    }
+
+</script>
+</html>
