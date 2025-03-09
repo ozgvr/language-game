@@ -39,7 +39,10 @@
         <div class="input-group input-group-lg">
             <input id="userInput" type="text" class="form-control text-center mb-2" placeholder="Unscramble the sentence...">
         </div>
-        <button class="btn btn-lg btn-primary mb-3"  onclick="checkAnswer()">Submit</button>
+        <div class="d-flex flex-column">
+            <button class="btn btn-lg btn-primary mb-2"  onclick="checkAnswer()">Check</button>
+            <button class="btn btn-lg btn-secondary"  onclick="renderRandomSentence()">Skip</button>
+        </div>
     </div>
 </body>
 <script>
